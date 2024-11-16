@@ -38,12 +38,12 @@
         form {
             margin-top: 20px;
         }
-        input[type="text"] {
-            padding: 10px;
-            width: 70%;
-            margin-right: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+        .checkbox-group {
+            margin: 10px 0;
+        }
+        label {
+            margin-right: 15px;
+            font-size: 16px;
         }
         button {
             padding: 10px 15px;
@@ -66,10 +66,14 @@
         <h2>About This Site</h2>
         <p>This is a simple example of a basic HTML website. It includes a header, a main content area, and a footer. The page also has some basic styling for a clean and simple appearance.</p>
         
-        <h3>Input Form</h3>
-        <p>Enter some text in the box below and press the button to navigate to a new page:</p>
+        <h3>Choose Options</h3>
+        <p>Select one or more options below and press the button to navigate to a new page:</p>
         <form id="inputForm">
-            <input type="text" id="userInput" placeholder="Enter the school you want to transfer to" required>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="options" value="UCLA"> UCLA</label>
+                <label><input type="checkbox" name="options" value="CPP"> CPP</label>
+                <label><input type="checkbox" name="options" value="YMCA"> YMCA</label>
+            </div>
             <button type="button" onclick="redirect()">Submit</button>
         </form>
     </main>
@@ -79,12 +83,14 @@
 
     <script>
         function redirect() {
-            const input = document.getElementById('userInput').value;
-            if (input.trim()) {
-                const encodedInput = encodeURIComponent(input);
-                window.location.href = `/school?from=${encodedInput}`;
+            const checkboxes = document.querySelectorAll('input[name="options"]:checked');
+            const selectedValues = Array.from(checkboxes).map(checkbox => checkbox.value);
+
+            if (selectedValues.length > 0) {
+                const encodedValues = encodeURIComponent(selectedValues.join(","));
+                window.location.href = `/school?data=${encodedValues}`;
             } else {
-                alert('Please enter some text before submitting!');
+                alert('Please select at least one option before submitting!');
             }
         }
     </script>
