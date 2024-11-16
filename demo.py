@@ -14,8 +14,9 @@ def page1():
 
 schools = ["UCLA", "USC", "CPP"]
 
+gen_eds = ["English", "Japanese", "Japanese II", "Dance", "Depression"]
+
 def handle_classes():
-    gen_eds = ["English", "Japanese", "Japanese II", "Dance", "Depression"]
     gen_eds = random.sample(gen_eds, k=len(gen_eds))
 
     classes = ""
@@ -28,7 +29,8 @@ Year {y}:
 
 @app.route('/school')
 def hello():
-    school_from = request.args.get('from')
+    schools_from = request.args.get('from').split(",")
+    school_from = ",".join(schools_from)
     return render_template('school.html', school_from=school_from, classes=handle_classes().split("\n"))
     
     #if school_from in schools:
