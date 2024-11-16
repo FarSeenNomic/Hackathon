@@ -29,11 +29,12 @@ Year {y}:
 @app.route('/school')
 def hello():
     school_from = request.args.get('from')
-    if school_from in schools:
-        return render_template('school.html', school_from=school_from, classes=handle_classes())
-    else:
-        nearest = max(schools, key=lambda r: similar( r.upper(), school_from.upper() ))
-        return render_template('school_error.html', school_from=school_from, DYM=nearest)
+    return render_template('school.html', school_from=school_from, classes=handle_classes().split("\n"))
+    
+    #if school_from in schools:
+    #else:
+    #    nearest = max(schools, key=lambda r: similar( r.upper(), school_from.upper() ))
+    #    return render_template('school_error.html', school_from=school_from, DYM=nearest)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=25565)

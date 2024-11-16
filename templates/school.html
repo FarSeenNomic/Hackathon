@@ -3,4 +3,6 @@
 <h1>You want to go to {{ school_from }}?</h1>
 <h1>I'm so sorry.</h1>
 
-{{ classes }}
+{% for para in classes %}
+    <p>{{para}}</p>
+{% endfor %}
