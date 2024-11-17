@@ -54,6 +54,7 @@ maj_eds = {}
 for file, school in [
     ["./UCLA_maj.csv", "UCLA"],
     ["./CPP_maj.csv", "CPP"],
+    ["./USC_maj.csv", "USC"],
 ]:
     maj_eds[school] = []
     f = open(file, "r")
