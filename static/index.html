@@ -55,6 +55,8 @@
 
             <label><input type="checkbox" name="intersession" id="inter" value="interx"> Include Intersession </label>
 
+            <label><input type="checkbox" name="math" id="math" value="mathx"> Math pre-req </label>
+
             <button type="button" onclick="redirect()">Submit</button>
         </form>
         <img src="/garf" alt="Centered Image" class="centered-image">
@@ -72,6 +74,7 @@
             const numberSemesters = document.getElementById('numberSemesters').value;
             const numberUnits = document.getElementById('numberUnits').value;
             const inter = document.getElementById('inter').checked;
+            const math = document.getElementById('math').checked;
 
             const selectedValues = Array.from(radioes).map(radio => radio.value);
             let queryParams = '';
@@ -82,6 +85,7 @@
                 queryParams += `semesters=${encodeURIComponent(numberSemesters)}&`;
                 queryParams += `units=${encodeURIComponent(numberUnits)}&`;
                 queryParams += `inter=${encodeURIComponent(inter)}&`;
+                queryParams += `math=${encodeURIComponent(math)}&`;
 
                 if (numberSemesters >= 4){
                     window.location.href = `/school?${queryParams.slice(0, -1)}`; // Remove trailing '&'
