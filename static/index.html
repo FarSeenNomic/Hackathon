@@ -28,7 +28,7 @@
         }
         footer {
             text-align: center;
-            padding: 1rem 0;
+            padding: 0rem 0;
             background: #35424a;
             color: #fff;
             position: fixed;
@@ -56,6 +56,12 @@
         button:hover {
             background-color: #556270;
         }
+        .centered-image {
+            display: block;
+            margin: 30px auto 0;
+            max-width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 <body>
@@ -71,11 +77,15 @@
         <form id="inputForm">
             <div class="checkbox-group">
                 <label><input type="checkbox" name="options" value="UCLA"> UCLA</label>
-                <label><input type="checkbox" name="options" value="CPP"> CPP</label>
-                <label><input type="checkbox" name="options" value="YMCA"> YMCA</label>
+                <label><input type="checkbox" name="options" value="CPP"> Cal Poly Pomona</label>
+                <label><input type="checkbox" name="options" value="CSU"> Cal State University</label>
+                <label><input type="checkbox" name="options" value="Invalid"> ICUP</label>
             </div>
             <button type="button" onclick="redirect()">Submit</button>
         </form>
+        <img src="/garf" alt="Centered Image" class="centered-image">
+        <br>
+        <br>
     </main>
     <footer>
         <p>&copy; 2024 Example Website</p>
