@@ -1,3 +1,5 @@
-BIOL A100,Principles of Biology,0,4
-CS A263,Probabilty,0,1
-MATH A230,Discrete Math,0,5
+MATH A180,Calculus 1,MATH A170,4
+MATH A185,Calculus 2,MATH A180,4
+MATH A280,Calculus 3,MATH A280,4
+PHYS A185,Calculus Based Physics: Mechanics,0,4
+PHYS A285,Calculus Based Physics: Modern,PHYS A185,4
