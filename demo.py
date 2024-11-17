@@ -12,20 +12,18 @@ app = Flask(__name__)
 def page1():
     return send_from_directory('static', "index.html")
 
-schools = ["UCLA", "USC", "CPP"]
+@app.route('/style.css')
+def css():
+    return send_from_directory('static', "style.css")
 
-gen_eds = [
-#    ["English",4],
-#    ["Japanese",4],
-#    ["Japanese II",4],
-#    ["Dance",4],
-#    ["Depression",4],
-]
+schools = ["UCLA", "USC", "CPP"]
+gen_eds = []
+maj_eds = []
 
 #gen_eds is [short name, full name, requirements, units]
 
 for file in [
-    "./Kassandra Code 2.csv",
+    #"./Kassandra Code 2.csv",
     "./Area 1",
     "./Area 2 IGETC",
     "./Area 3",
@@ -37,50 +35,82 @@ for file in [
         ls = line.split(",")
         if len(ls) == 3:
             try:
-                gen_eds.append([ls[0], ls[1], int(ls[2]), "0"])
+                gen_eds.append([ls[0], ls[1], "0", int(ls[2])])
             except ValueError:
                 pass
                 print(f"VE1 at {ls}")
         elif len(ls) == 4:
             try:
-                gen_eds.append([ls[0], ls[1], int(ls[2]), ls[3]])
+                gen_eds.append([ls[0], ls[1], ls[2], int(ls[3])])
             except ValueError:
                 pass
                 print(f"VE2 at {ls}")
+        elif len(ls) == 1:
+            pass
         else:
             print(ls)
 
-maj_eds = [
-    ["Math 10",4],
-    ["CALC I",4],
-    ["CALC II",4],
-    ["CALC III",4],
-]
+f = open("./majoring_classes.csv", "r")
+for line in f.read().split("\n"):
+    ls = line.split(",")
+    if len(ls) == 4:
+        try:
+            maj_eds.append([ls[0], ls[1], ls[2], int(ls[3])])
+        except ValueError:
+            pass
+            print(f"VE2 at {ls}")
+    elif len(ls) == 1:
+        pass
+    else:
+        print(ls)
 
-def get_random_classes_order():
+def get_ges_classes_order():
+    """
+    puts the classes in a heap
+    depending on their requirements
+    """
+    global gen_eds
     cl = random.sample(gen_eds, k=len(gen_eds))
     try:
-        p1 = [name for name, a, b in cl].index("ENGL A100")
-        if p1 != 0:
-            cl[0],cl[p1] = cl[p1],cl[0]
+        p1 = [short for short, full, reqs, units in cl].index("ENGL A100")
+        if p1 != len(cl)-1:
+            cl[~0],cl[p1] = cl[p1],cl[~0]
     except ValueError:
         print("ENGL A100 failed")
+
+    for i in range(len(cl)):
+        if cl[i][2] in "01":
+            continue
+        try:
+            p1 = [short for short, full, reqs, units in cl].index(cl[i][2])
+            if p1 < i:
+                cl[i],cl[p1] = cl[p1],cl[i]
+        except ValueError:
+            print(f"{cl[i]} failed")
+
     return cl
 
-def handle_classes():
+#print("a")
+#x=get_ges_classes_order()
+#print("a")
+#for i in x:
+#    print(i)
+
+def handle_classes(sems):
     global gen_eds
     global maj_eds
     edct = len(maj_eds)
     gened_index = 0
 
     classes_list = []
-    sems = 4
     for i in range(sems):
         classes_list.append(maj_eds[int(i*edct/sems):int((i+1)*edct/sems)])
 
-    GE_local = get_random_classes_order()
+    GE_local = get_ges_classes_order()
     for i in range(len(classes_list)):
-        while sum(x[1] for x in classes_list[i]) < 12:
+        print(1, classes_list[i])
+        while sum(x[3] for x in classes_list[i]) < 12:
+            print(2, classes_list[i])
             classes_list[i].append(GE_local.pop())
 
             # Just for test cases
@@ -90,16 +120,19 @@ def handle_classes():
 
     classes_output = []
     for index, sem_classes in enumerate(classes_list):
-        classes_output.append(f"Semester {index} ({sum(units for c,units in sem_classes)} Units):")
-        for c,units in sem_classes:
-            classes_output.append(f"{c} for {units} Units")
+        classes_output.append(f"Semester {index+1} ({sum(units for short, full, reqs, units in sem_classes)} Units):")
+        for short, full, reqs, units in sem_classes:
+            classes_output.append(f"{short}: {full} ({units} Units)")
     return classes_output
 
 @app.route('/school')
 def hello():
     schools_from = request.args.get('data').split(",")
+    major = request.args.get('major')
+    semesters = int(request.args.get('semesters'))
+
     school_from = ",".join(schools_from)
-    return render_template('school.html', school_from=school_from, classes=handle_classes())
+    return render_template('school.html', school_from=school_from, classes=handle_classes(semesters))
     
     #if school_from in schools:
     #else:

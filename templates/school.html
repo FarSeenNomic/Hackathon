@@ -1,8 +1,25 @@
-<!doctype html>
-<title>Hello from Flask</title>
-<h1>You want to go to {{ school_from }}?</h1>
-<h1>I'm so sorry.</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Helper</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Hello from Flask</h1>
+    </header>
+    <main>
+        <h1>You want to go to {{ school_from }}?</h1>
+        <h1>I'm so sorry.</h1>
 
-{% for para in classes %}
-    <p>{{para}}</p>
-{% endfor %}
+        {% for para in classes %}
+            <p>{{ para }}</p>
+        {% endfor %}
+    </main>
+    <footer>
+        <p>&copy; 2026 Flask Example</p>
+    </footer>
+</body>
+</html>

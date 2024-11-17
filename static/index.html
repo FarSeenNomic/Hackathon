@@ -3,70 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Example Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
-        }
-        header {
-            background: #35424a;
-            color: #fff;
-            padding: 1rem 0;
-            text-align: center;
-        }
-        main {
-            padding: 20px;
-            max-width: 800px;
-            margin: 20px auto;
-            background: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        footer {
-            text-align: center;
-            padding: 0rem 0;
-            background: #35424a;
-            color: #fff;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        form {
-            margin-top: 20px;
-        }
-        .checkbox-group {
-            margin: 10px 0;
-        }
-        label {
-            margin-right: 15px;
-            font-size: 16px;
-        }
-        button {
-            padding: 10px 15px;
-            background-color: #35424a;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #556270;
-        }
-        .centered-image {
-            display: block;
-            margin: 30px auto 0;
-            max-width: 100%;
-            height: auto;
-        }
-    </style>
+    <title>Class Helper</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Welcome to My Example Website</h1>
+        <h1>Welcome to Class Helper</h1>
     </header>
     <main>
         <h2>About This Site</h2>
@@ -75,12 +17,29 @@
         <h3>Choose Options</h3>
         <p>Select one or more options below and press the button to navigate to a new page:</p>
         <form id="inputForm">
+            <!-- Checkboxes -->
             <div class="checkbox-group">
-                <label><input type="checkbox" name="options" value="UCLA"> UCLA</label>
-                <label><input type="checkbox" name="options" value="CPP"> Cal Poly Pomona</label>
-                <label><input type="checkbox" name="options" value="CSU"> Cal State University</label>
-                <label><input type="checkbox" name="options" value="Invalid"> ICUP</label>
+                <label><input type="checkbox" name="options" value="UCLA"> UCLA </label>
+                <label><input type="checkbox" name="options" value="CPP"> Cal Poly Pomona </label>
+                <label><input type="checkbox" name="options" value="USC"> USC </label>
             </div>
+            
+            <!-- Dropdown Menu -->
+            <div class="dropdown-group">
+                <label for="dropdown">Major:</label>
+                <select id="dropdown" name="dropdown">
+                    <option value="CMPR">Computer Science</option>
+                    <option value="CMPR">Computer Science</option>
+                    <option value="CMPR">Computer Science</option>
+                </select>
+            </div>
+            
+            <!-- Number Input -->
+            <div class="number-group">
+                <label for="numberInput">Enter a number of semesters to transfer in:</label>
+                <input type="number" id="numberInput" name="numberInput" min="1" max="25" placeholder="Enter a value">
+            </div>
+
             <button type="button" onclick="redirect()">Submit</button>
         </form>
         <img src="/garf" alt="Centered Image" class="centered-image">
@@ -88,19 +47,32 @@
         <br>
     </main>
     <footer>
-        <p>&copy; 2024 Example Website</p>
+        <p>&copy; 2026 Example Website</p>
     </footer>
 
     <script>
         function redirect() {
             const checkboxes = document.querySelectorAll('input[name="options"]:checked');
+            const dropdown = document.getElementById('dropdown').value;
+            const numberInput = document.getElementById('numberInput').value;
+
             const selectedValues = Array.from(checkboxes).map(checkbox => checkbox.value);
+            let queryParams = '';
 
             if (selectedValues.length > 0) {
-                const encodedValues = encodeURIComponent(selectedValues.join(","));
-                window.location.href = `/school?data=${encodedValues}`;
+                queryParams += `data=${encodeURIComponent(selectedValues.join(","))}&`;
+            }
+            if (dropdown) {
+                queryParams += `major=${encodeURIComponent(dropdown)}&`;
+            }
+            if (numberInput) {
+                queryParams += `semesters=${encodeURIComponent(numberInput)}&`;
+            }
+
+            if (queryParams) {
+                window.location.href = `/school?${queryParams.slice(0, -1)}`; // Remove trailing '&'
             } else {
-                alert('Please select at least one option before submitting!');
+                alert('Please make selections before submitting!');
             }
         }
     </script>
