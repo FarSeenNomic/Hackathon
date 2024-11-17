@@ -1,0 +1,15 @@
+/*Area 1*/
+/*Group 1A*/
+ENGL A100, Freshman Composition, 0, 3
+
+/*Group 1B*/
+ENGL A101, Critical Reasoning: Fiction, ENGL A100, 4
+ENGL A101H, Critical Reasoning: Fiction Honors, ENGL A100, 4
+ENGL A102, Critical Reasoning: Nonfiction, ENGL A100, 3
+ENGL A102H, Critical Reasoning: Nonfiction Honors, ENGL A100, 3
+ENGL A109, Critical Reasoning and Writing for Science and Technology, ENGL A100, 3
+PHIL A150, Critical Reasoning & Writing, ENGL A100, 3
+
+/*Group 1C*/ CSU REQUIRED
+CMST A100, Interpersonal Communication, 0, 3
+CMST A110, Public Speaking, 0, 3

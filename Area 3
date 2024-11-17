@@ -1,0 +1,149 @@
+/*Area 3*/
+/*Group 3A*/
+
+ARCH A290, History of Architecture 1, 0, 3
+ARCH A290H, History of Architecture 1 Honors, 0, 3
+ARCH A296, History of Architecture 2, 0, 3
+ARCH A296H, History of Architecture 2 Honors, 0, 3
+ART A100, Survey of Western Art from Prehistory Through Gothic, 0, 3
+ART A100H, Honors Survey of Western Art from Prehistory Through Gothic, 0, 3
+ART A101, Survey of Western Art from Renaissance to Modern, 0, 3
+ART A101H, Honors Survey of Western Art from Renaissance to Modern, 0, 3
+ART A102, Survey of Modern and Contemporary Art History, 0, 3
+ART A103, Survey of Asian Art, 0, 3
+ART A107, Introduction To Art, 0, 3
+ART A108, Women in Art, 0, 3
+ART A109, Ancient Greek Art and Architecture, 0, 3
+ART A114, Art of the Ancient Americas, 0, 3
+ART A115, Art of Africa, Oceania, and Indigenous North America, 0, 3
+DANC A200, Appreciation Of Dance, 0, 3
+DANC A230, World Dance and Culture, 0, 3
+FILM A100, History and Appreciation of the Cinema, 0, 3
+FILM A100H, History and Appreciation of the Cinema Honors, 0, 3
+FILM A109, Science Fiction Film, 0, 3
+FILM A109H, Science Fiction Film Honors, 0, 3
+MUS A100, History and Appreciation of Western Classical Music, 0, 3
+MUS A105, Music from Bach Up to Rock, 0, 3
+MUS A115, Fundamentals of Music, 0, 3
+MUS A139, History of Rock Music, 0, 3
+MUS A143, History of Jazz, 0, 3
+MUS A180, Theory 1, 0, 3
+PHOT A110, Photography with a Smartphone: Theory and Practice, 0, 3
+PHOT A123, Introduction to Digital Photography, 0, 3
+PHOT A130, History and Appreciation of Photography, 0, 3
+PHOT A230, Photography Since 1945, 0, 3
+THEA A100, Introduction to Theatre, 0, 3
+THEA A101, Introduction to History and Literature of the Theatre, 0, 3
+THEA A105, Drama and Acting, 0, 3
+
+/*Group 3B*/
+CHIN A180, Elementary Chinese 1, 0, 5
+CHIN A185, Elementary Chinese 2, CHIN A180, 5
+CMST A155, Intercultural Communications, 0, 3
+CMST A180, Introduction to Mass Communications, 0, 3
+ENGL A140, Introduction to Literature, 0, 3
+ENGL A140H,Introduction to Literature Honors, 0, 3
+ENGL A141,The Bible As Literature, ENGL A100, 3
+ENGL A141H,The Bible As Literature Honors, ENGL A100, 3
+ENGL A143, Children's Literature, ENGL A100, 3
+ENGL A143H, Children's Literature Honors, ENGL A100, 3
+ENGL A147, Introduction to Science Fiction, ENGL A100, 3
+ENGL A147H, Introduction to Science Fiction Honors, ENGL A100, 3
+ENGL A148, Film As Literature, 0, 3
+ENGL A148H, Film As Literature Honors, 0, 3
+ENGL A150, American Literature Before the 20th Century, 0, 3
+ENGL A150H, American Literature Before the 20th Century Honors, 0, 3
+ENGL A151, American Literature in the 20th Century, 0, 3
+ENGL A151H, American Literature in the 20th Century Honors, 0, 3
+ENGL A152, Race, Culture, and Identity in Literature, 0, 3
+ENGL A152H, Race, Culture, and Identify in Literature Honors, 0, 3
+ENGL A156, California Literature, 0, 3
+ENGL A156H, California Literature Honors, 0, 3
+ENGL A160, World Literature Through Renaissance, 0, 3
+ENGL A160H, World Literature Through Renaissance Honors, 0, 3
+ENGL A161, World Literature Since Renaissance, 0, 3
+ENGL A161H, World Literature Since Renaissance Honors, 0, 3
+ENGL A168, Popular Fiction, 0, 3
+ENGL A170, Contemporary Literature, 0, 3
+ENGL A170H, Contemporary Literature Honors, 0, 3
+ENGL A173, Women Writers, 0, 3
+ENGL A173H, Women Writers Honors, 0, 3
+ENGL A176, World Mythology, 0, 3
+ENGL A176H, World Mythology Honors, 0, 3
+ENGL A179, Gender and Sexuality in Literature and Film, 0, 3
+ENGL A179H, Gender and Sexuality in Literature and Film Honors, 0, 3
+ENGL A181, Shakespeare, 0, 3
+ENGL A181H, Shakespeare Honors, 0, 3
+ENGL A187, Introduction to Literary Theory, 0, 3
+ENGL A187H, Introduction to Literary Theory Honors, 0, 3
+ENGL A270, Survey of British Literature Before 1800, 0, 3
+ENGL A270H, Survey of British Literature Before 1800 Honors, 0, 3
+ENGL A275, Survey of British Literature After 1800, 0, 3
+ENGL A275H, Survey of British Literature After 1800 Honors, 0, 3
+ETHS A150, Ethnic Groups in the United States: Their Histories, 0, 3
+FREN A180, Elementary French 1, 0, 5
+FREN A180H, Elementary French 1 Honors, 0, 5
+FREN A185, Elementary French 2, FREN A180, 5
+FREN A185H, Elementary French 2 Honors, FREN A180, 5
+FREN A280, Intermediate French 1, FREN 185, 4
+FREN A285, Intermediate French 2, FREN 280, 4
+GNDR A187, Women in History, 0, 3
+GRMN A180, Elementary German 1, 0, 5
+GRMN A185, Elementary German 2, GRMN A180, 5
+GRMN A280, Intermediate German 1, GRMN A185, 4
+GRMN A285, Intermediate German 2, GRMN A280, 4
+HIST A101, Afro-American History, 0, 3
+HIST A150, Ethnic Groups of the United States: Their Histories, 0, 3
+HIST A151, History of the Middle East to 1500, 0, 3
+HIST A152, History of the Middle East Since 1500, 0, 3
+HIST A161, World History 1, 0, 3
+HIST A161H, World History 1 Honors, 0, 3
+HIST A162, World History 2, 0, 3
+HIST A162H, World History 2 Honors, 0, 3
+HIST A170, History of the United States to 1876, 0, 3
+HIST A170H, History of the United States to 1876 Honors, 0, 3
+HIST A175, History of the United States Since 1876, 0, 3
+HIST A175H, History of the United States Since 1876 Honors, 0, 3
+HIST A176, Women In U.S. History, 0, 3
+HIST A180, Western Civilization 1, 0, 3
+HIST A180H, Western Civilization 1 Honors, 0, 3
+HIST A185, Western Civilization 2, 0, 3
+HIST A185H, Western Civilization 2 Honors, 0, 3
+HIST A187, Women in History, 0, 3
+HIST A195, History of England and Greater Britain, 0, 3
+HUM A100, Introduction to the Humanities, 0, 3
+HUM A101H, Themes in Humanities Honors, 0, 3
+ITAL A180, Elementary Italian 1, 0, 5
+ITAL A185, Elementary Italian 2, ITAL A180, 5
+ITAL A280, Intermediate Italian 1, ITAL A185, 5
+ITAL A285, Intermediate Italian 2, ITAL A280, 5
+JAPN A180, Elementary Japanese 1, 0, 5
+JAPN A180H, Elementary Japanese 1 Honors, 0, 5
+JAPN A185, Elementary Japanese 2, JAPN A180, 5
+JAPN A185H,Elementary Japanese 2 Honors, JAPN A180, 5
+JAPN A280, Intermediate Japanese 1, JAPN A185, 5
+JAPN A285, Intermediate Japanese 2, JAPN A280, 5
+PHIL A100, Introduction to Philosophy, 0, 3
+PHIL A115, Philosophy of Religion, 0, 3
+PHIL A118, Aesthetics/Philosophy of Art, 0, 3
+PHIL A120, Ethics, 0, 3
+PHIL A125, History of Ancient Philosophy, 0, 3
+PHIL A140, History of Modern Philosophy, 0, 3
+PHIL A165, The Theory of Knowledge, 0, 3
+PHIL A185, Contemporary Philosophy, 0, 3
+PHOT A101, Photography and Society, 0, 3
+PORT A180, Elementary Portuguese 1, 0, 5
+PORT A185, Elementary Portuguese 2, 0, 5
+RLST A100, Introduction to Religious Studies, 0, 3
+RLST A110, World Religion, 0, 3
+RLST A115, Philosophy of Religion, 0, 3
+RLST A135, Religion, Spirituality and Society, 0, 3
+RLST A150, Eastern Thought, 0, 3
+RLST A151, Early and Western Religions, 0, 3
+SPAN A180, Elementary Spanish 1, 0, 5
+SPAN A185, Elementary Spanish 2, SPAN A180, 5
+SPAN A185H, Elementary Spanish 2 Honors, SPAN A180, 5
+SPAN A280, Intermediate Spanish 1, SPAN A185, 5
+SPAN A280H, Intermediate Spanish 1 Honors, SPAN A185, 5
+SPAN A285,Intermediate Spanish 2, SPAN A280, 5
+VIET A185,Elementary Vietnamese 2, SPAN A280, 5
