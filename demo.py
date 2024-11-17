@@ -25,7 +25,7 @@ maj_eds = []
 for file in [
     #"./Kassandra Code 2.csv",
     "./Area 1",
-    "./Area 2 IGETC",
+    #"./Area 2 IGETC",
     "./Area 3",
     "./Area 5A IGETC",
     "./Area 6 IGETC",
