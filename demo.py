@@ -72,7 +72,6 @@ import os
 @app.route('/garf')
 def garf():
     files = os.listdir("D:/Pictures/garfield/")
-    print(files)
     return send_from_directory("D:/Pictures/garfield/", random.choice(files))
 
 if __name__ == '__main__':
