@@ -59,7 +59,7 @@
             const selectedValues = Array.from(checkboxes).map(checkbox => checkbox.value);
             let queryParams = '';
 
-            if (selectedValues.length > 0) {
+            /*if (selectedValues.length > 0) {
                 queryParams += `data=${encodeURIComponent(selectedValues.join(","))}&`;
             }
             if (dropdown) {
@@ -67,9 +67,13 @@
             }
             if (numberInput) {
                 queryParams += `semesters=${encodeURIComponent(numberInput)}&`;
-            }
+            }*/
 
-            if (queryParams) {
+            if (selectedValues.length > 0 && dropdown && numberInput) {
+                queryParams += `data=${encodeURIComponent(selectedValues.join(","))}&`;
+                queryParams += `major=${encodeURIComponent(dropdown)}&`;
+                queryParams += `semesters=${encodeURIComponent(numberInput)}&`;
+                
                 window.location.href = `/school?${queryParams.slice(0, -1)}`; // Remove trailing '&'
             } else {
                 alert('Please make selections before submitting!');
