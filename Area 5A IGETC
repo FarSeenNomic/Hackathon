@@ -1,0 +1,80 @@
+/*Area 5A*/
+ASTR A100,	Introduction to Astronomy,3
+or ASTR A100H, Introduction to Astronomy Honors,3
+ASTR A100 & A100L, Introduction to Astronomy and Introduction to Astronomy Laboratory,1,4
+or ASTR A100M, Introduction to Astronomy Laboratory Honors,4
+ASTR A100H & ASTR A100M, Introduction to Astronomy Honors and Introduction to Astronomy Laboratory Honors,1,4
+or ASTR A100L, Introduction to Astronomy Laboratory,4
+ASTR A101, Planetary Astronomy,3
+ASTR A102, Stellar Astronomy,3
+ASTR A103, Cosmology,3
+ASTR A104, Galactic Astronomy,3
+ASTR A200, Introduction to Astrophysics,4
+or ASTR A200H, Introduction to Astrophysics Honors,4
+CHEM A100,	Principles of Chemistry	3
+CHEM A110,	Introduction to Chemistry,1,5
+CHEM A130, Preparation for General Chemistry,1,4
+CHEM A180,	General Chemistry A,1,5
+CHEM A185,	General Chemistry B,1,5
+CHEM A220,	Organic Chemistry A,3
+CHEM A220L,	Organic Chemistry A Lab,1,2
+CHEM A225,	Organic Chemistry B,3
+CHEM A225L,	Organic Chemistry B Laboratory,1,2
+GEOG A180,	Physical Geography,3
+or GEOG A180H, Physical Geography Honors,3
+GEOG A180 & A180L, Physical Geography and Physical Geography Lab,1,4
+or GEOG A180H	& GEOG A180L, Physical Geography Honors and Physical Geography Lab,1,4
+GEOL A105,	General Geology,3
+or GEOL A105H, General Geology Honors,3
+GEOL A105 & A105L, General Geology and General Geology Laboratory,1,4
+or GEOL A105M, General Geology Laboratory Honors,4
+GEOL A105H & GEOL A105M, General Geology Honors and General Geology Laboratory Honors, 1,	4
+or GEOL A105L, General Geology Laboratory,4
+GEOL A110,	Physical Geology,1,4
+GEOL A160,	Environmental Geology,1,4
+GEOL A185,	Evolution of the Earth,3
+GEOL A185 & A185L,	Evolution of the Earth and Evolution of the Earth Lab,1,4
+MRSC A185,	Coastal Oceanography,3
+MRSC A185 & A185L,	Coastal Oceanography and Coastal Oceanography Lab,1,4
+PHYS A110,	Conceptual Physics,3
+PHYS A110 & PHYS A111,	Conceptual Physics and Introductory Physics Laboratory,1,4
+PHYS A120,	Algebra-Based Physics 1, Mechanics with Lab,1,4
+PHYS A130,	University Physics 1 (non-majors),1,4
+PHYS A185,  Calculus Based Physics, Mechanics,1,4
+or PHYS A185H, Calculus-Based Physics, Mechanics Honors,1,4
+PHYS A280,	Calculus Based Physics, Electricity/Magnetism,1,4
+PHYS A285,	Calculus Based Physics, Modern,1,4
+
+/*Area 5B*/
+ANTH A185, Introduction to Biological Anthropology,3
+or ANTH A185H,	Introduction to Biological Anthropology Honors,3
+ANTH A185 & A185L,	Introduction to Biological Anthropology and Biological Anthropology Laboratory,1,4
+ANTH A185H & ANTH A185L,	Introduction to Biological Anthropology Honors and Biological Anthropology Laboratory,1,4
+BIOL A100,	Principles of Biology or Principles of Biology Honors,1,4
+or BIOL A100H, Principles of Biology Honors,4
+BIOL A101,	The Biology of Cooking,4
+BIOL A125,	Human Biology,3
+BIOL A180,	Introduction to Biology for Majors 1, Cell and Molecular Biology,1,4
+BIOL A182, Zoology,3
+or BIOL A182H, Zoology Honors,3
+BIOL A182 & A182L,	Zoology and Zoology Lab,1.4
+BIOL A182H & BIOL A182L,	Zoology Honors and Zoology Lab,1,4
+BIOL A183,	Botany,3
+BIOL A183 & A183L,	Botany and Botany Lab,1,4
+BIOL A185,	Introduction to Biology for Majors 2, Ecology, Evolution, Diversity, and Physiology,1,5
+BIOL A210,	General Microbiology,1,5
+BIOL A220,	Human Anatomy,1,5
+BIOL A221,	Anatomy-Physiology,1,4
+BIOL A225,	Human Physiology,1,5
+BIOL A283,	Genetics,4
+ESEC A100, 	Introduction to Environmental Science,3
+or ESEC A100H, Introduction to Environmental Science Honors,3
+MRSC A100, 	Oceanography,3
+or MRSC A100H, Oceanography Honors,3
+MRSC A100 & A100L,	Oceanography and Oceanography Laboratory,1,4
+or MRSC A100M, Oceanography Laboratory Honors,4
+MRSC A100H & MRSC A100M	or MRSC A100L Oceanography Honors and Oceanography Laboratory Honors,1,4
+or MRSC A100L, Oceanography Laboratory,4
+MRSC A180,	Marine Biology,3
+MRSC A180 & A180L,	Marine Biology and Marine Biology Lab,1,4
+PSYC A250,	Psychobiology,3
