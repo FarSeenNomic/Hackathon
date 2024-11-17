@@ -40,6 +40,8 @@
                 <input type="number" id="numberInput" name="numberInput" min="4" max="16" placeholder="Enter a value">
             </div>
 
+            <label><input type="checkbox" name="intersession" id="inter" value="interx"> Include Intersession </label>
+
             <button type="button" onclick="redirect()">Submit</button>
         </form>
         <img src="/garf" alt="Centered Image" class="centered-image">
@@ -55,6 +57,7 @@
             const checkboxes = document.querySelectorAll('input[name="options"]:checked');
             const dropdown = document.getElementById('dropdown').value;
             const numberInput = document.getElementById('numberInput').value;
+            const inter = document.getElementById('inter').checked;
 
             const selectedValues = Array.from(checkboxes).map(checkbox => checkbox.value);
             let queryParams = '';
@@ -73,6 +76,7 @@
                 queryParams += `data=${encodeURIComponent(selectedValues.join(","))}&`;
                 queryParams += `major=${encodeURIComponent(dropdown)}&`;
                 queryParams += `semesters=${encodeURIComponent(numberInput)}&`;
+                queryParams += `inter=${encodeURIComponent(inter)}&`;
                 
                 window.location.href = `/school?${queryParams.slice(0, -1)}`; // Remove trailing '&'
             } else {

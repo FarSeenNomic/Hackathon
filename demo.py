@@ -96,7 +96,7 @@ def get_ges_classes_order():
 #for i in x:
 #    print(i)
 
-def handle_classes(sems):
+def handle_classes(sems, inter):
     global gen_eds
     global maj_eds
     edct = len(maj_eds)
@@ -125,6 +125,14 @@ def handle_classes(sems):
         for short, full, reqs, units in sem_classes:
             classes_per_sem.append(f"{short}: {full} ({units} Units)")
         classes_output.append(classes_per_sem)
+
+        if inter:
+            classes_per_sem = []
+            classes_per_sem.append(f"Interession:")
+            short, full, reqs, units = GE_local.pop()
+            classes_per_sem.append(f"{short}: {full} ({units} Units)")
+            classes_output.append(classes_per_sem)
+
     return classes_output
 
 @app.route('/school')
@@ -132,9 +140,12 @@ def hello():
     schools_from = request.args.get('data').split(",")
     major = request.args.get('major')
     semesters = int(request.args.get('semesters'))
+    inter = request.args.get('inter') == "true"
 
     school_from = ",".join(schools_from)
-    return render_template('school.html', school_from=school_from, classes=handle_classes(semesters))
+    return render_template('school.html',
+        school_from=school_from,
+        classes=handle_classes(semesters, inter))
     
     #if school_from in schools:
     #else:
