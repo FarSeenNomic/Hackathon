@@ -1,38 +1,29 @@
 /*Area 6A*/
-CHIN A180,	Elementary Chinese I,5
-CHIN A185,	Elementary Chinese II,5
-FREN A180, 	Elementary French I,5
-or FREN A180H, Elementary French I Honors,5
-FREN A185, 	Elementary French II,5
-or FREN A185H, Elementary French II Honors,5
-FREN A280, 	Intermediate French I,4
-or FREN A280H, Intermediate French I Honors,4
-FREN A285, Intermediate French II,4
-or FREN A285H,	Intermediate French II Honors,4
-GRMN A180,	Elementary German I,5
-GRMN A185,	Elementary German II,5
-GRMN A280,	Intermediate German I,4
-GRMN A285,	Intermediate German II,4
-ITAL A180,	Elementary Italian I,5
-ITAL A185,	Elementary Italian II,5
-ITAL A280,	Intermediate Italian I,5
-ITAL A285,	Intermediate Italian II,5
-JAPN A180,  Elementary Japanese I,5
-or JAPN A180H,	Elementary Japanese I Honors,5
-JAPN A185,  Elementary Japanese II,5
-or JAPN A185H,	Elementary Japanese II Honors,5
-JAPN A280,	Intermediate Japanese I,5
-JAPN A285,	Intermediate Japanese II,5
-PORT A180,	Elementary Portuguese I,5
-PORT A185,	Elementary Portuguese II,5
-SPAN A160,	Spanish for Heritage Speakers I,5
-SPAN A165,	Spanish for Heritage Speakers II,5
-SPAN A180,  Elementary Spanish I,5
-or SPAN A180H,	Elementary Spanish I Honors,5
-SPAN A185,  Elementary Spanish II,5
-or SPAN A185H,	Elementary Spanish II Honors,5
-SPAN A280, Intermediate Spanish I,5
-or SPAN A280H,	Intermediate Spanish I Honors,5
-SPAN A285,	Intermediate Spanish II,5
-VIET A180,	Elementary Vietnamese I,5
-VIET A185,	Elementary Vietnamese II,5
+CHIN A180,Elementary Chinese I,0,5
+CHIN A185,Elementary Chinese II,0,5
+FREN A180,Elementary French I,0,5
+FREN A185,Elementary French II,0,5
+FREN A280,Intermediate French I,0,4
+FREN A285,Intermediate French II,0,4
+GRMN A180,Elementary German I,0,5
+GRMN A185,Elementary German II,0,5
+GRMN A280,Intermediate German I,0,4
+GRMN A285,Intermediate German II,0,4
+ITAL A180,Elementary Italian I,0,5
+ITAL A185,Elementary Italian II,0,5
+ITAL A280,Intermediate Italian I,0,5
+ITAL A285,Intermediate Italian II,0,5
+JAPN A180, Elementary Japanese I,0,5
+JAPN A185, Elementary Japanese II,0,5
+JAPN A280,Intermediate Japanese I,0,5
+JAPN A285,Intermediate Japanese II,0,5
+PORT A180,Elementary Portuguese I,0,5
+PORT A185,Elementary Portuguese II,0,5
+SPAN A160,Spanish for Heritage Speakers I,0,5
+SPAN A165,Spanish for Heritage Speakers II,0,5
+SPAN A180, Elementary Spanish I,0,5
+SPAN A185, Elementary Spanish II,0,5
+SPAN A280,Intermediate Spanish I,0,5
+SPAN A285,Intermediate Spanish II,0,5
+VIET A180,Elementary Vietnamese I,0,5
+VIET A185,Elementary Vietnamese II,0,5
