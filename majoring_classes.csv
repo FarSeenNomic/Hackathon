@@ -1,18 +1,17 @@
-1,MATH A170,Precalculus,0,4
-2,MATH A180 or MATH A180H,Calculus 1 or Calculus 1 Honors or Calculus 1 and 2 Honors,0,4
-3,MATH A182H,Calculus 1 and 2 Honors,1,5
-4,MATH A185 or MATH A185H,Calculus 2 or Calculus 2 Honors,1,4
-5,Math A280 or Math A280H,Calculus 3 or Calculus 3 Honors,1,4
-6,MATH A285 or MATH A285H,Introduction to Linear Algebra and Differential Equations or Introduction to Linear Algebra and Differential Equations Honors,1,4
-7,MATH A230 or CS A262,Introduction to Discrete Mathematics or Discrete Structures,1,4
-8,PHYS A185 or PHYS A185H,Calculus Based Physics: Mechanics or Calculus-Based Physics: Mechanics Honors,2,4
-9,PHYS A280,Calculus Based Physics: Electricty/Magnetism,2,4
-10,PHYS A285,Calculus Based Physics: Modern,2,4
-11,CS A131 (P),Python Programming I,0,4
-11,CS A150,C++ Programming Language 1,1,4
-12,CS A250,C++ Programming Language 2,2,4
-13,CS A200,Data Structures,2,4	
-14,BIOL A100 or BIOL A100H,Principles of Biology or Principles of Biology Honors,0,4
-15,CS A263,Probability and Statistics for Computer Science,1,4
-16,CS A170,Java Programming 1,0,4
-17,CS A200,Data Structures,2,4
+MATH A170,Precalculus,0,4
+CS A131,Python Programming I,0,4
+PHYS A185,Calculus Based Physics: Mechanics,0,4
+MATH A285,Introduction to Linear Algebra and Differential Equations,MATH A280,4
+CS A150,C++ Programming Language 1,0,4
+CS A170,Java Programming 1,CS A150,4
+MATH A180,Calculus 1,MATH A170,4
+PHYS A280,Calculus Based Physics: Electricty/Magnetism,PHYS A185,4
+CS A263,Probability and Statistics for Computer Science,0,4
+MATH A230,Introduction to Discrete Mathematics,MATH A180,4
+PHYS A285,Calculus Based Physics: Modern,PHYS A185,4
+CS A250,C++ Programming Language 2,CS A150,4
+MATH A185,Calculus 2,MATH A180,4
+BIOL A100,Principles of Biology,0,4
+CS A200,Data Structures,CS A170,4
+MATH A280,Calculus 3,MATH A280,4
+CS A200,Data Structures,0,4
