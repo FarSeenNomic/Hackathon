@@ -14,7 +14,20 @@ def page1():
 
 schools = ["UCLA", "USC", "CPP"]
 
-gen_eds = ["English", "Japanese", "Japanese II", "Dance", "Depression"]
+gen_eds = [
+    "English",
+    "Japanese",
+    "Japanese II",
+    "Dance",
+    "Depression",
+]
+
+maj_eds = [
+    "Math 10",
+    "CALC I",
+    "CALC II",
+    "CALC III",
+]
 
 def handle_classes():
     gen_eds = random.sample(gen_eds, k=len(gen_eds))
@@ -37,6 +50,13 @@ def hello():
     #else:
     #    nearest = max(schools, key=lambda r: similar( r.upper(), school_from.upper() ))
     #    return render_template('school_error.html', school_from=school_from, DYM=nearest)
+
+import os
+@app.route('/garf')
+def garf():
+    files = os.listdir("D:/Pictures/garfield/")
+    print(files)
+    return send_from_directory("D:/Pictures/garfield/", random.choice(files))
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=25565)
