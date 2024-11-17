@@ -50,19 +50,25 @@ for file in [
         else:
             print(ls)
 
-f = open("./majoring_classes.csv", "r")
-for line in f.read().split("\n"):
-    ls = line.split(",")
-    if len(ls) == 4:
-        try:
-            maj_eds.append([ls[0], ls[1], ls[2], int(ls[3])])
-        except ValueError:
+maj_eds = {}
+for file, school in [
+    ["./majoring_classes.csv", "UCLA"],
+    ["./CPP_maj.csv", "CPP"],
+]:
+    maj_eds[school] = []
+    f = open(file, "r")
+    for line in f.read().split("\n"):
+        ls = line.split(",")
+        if len(ls) == 4:
+            try:
+                maj_eds[school].append([ls[0], ls[1], ls[2], int(ls[3])])
+            except ValueError:
+                pass
+                print(f"VE2 at {ls}")
+        elif len(ls) == 1:
             pass
-            print(f"VE2 at {ls}")
-    elif len(ls) == 1:
-        pass
-    else:
-        print(ls)
+        else:
+            print(ls)
 
 def get_ges_classes_order():
     """
@@ -96,17 +102,22 @@ def get_ges_classes_order():
 #for i in x:
 #    print(i)
 
-def handle_classes(sems, inter, units, math):
+def handle_classes(sems, school, inter, units, math):
     global gen_eds
     global maj_eds
-    edct = len(maj_eds)
     gened_index = 0
+    try:
+        local_maj_eds = maj_eds[school]
+    except:
+        print(f"invalid school {school}")
+        local_maj_eds = maj_eds["UCLA"]
     if math:
-        maj_eds = maj_eds[1:]
+        local_maj_eds = local_maj_eds[1:]
+    edct = len(local_maj_eds)
 
     classes_list = []
     for i in range(sems):
-        classes_list.append(maj_eds[int(i*edct/sems):int((i+1)*edct/sems)])
+        classes_list.append(local_maj_eds[int(i*edct/sems):int((i+1)*edct/sems)])
 
     GE_local = get_ges_classes_order()
     for i in range(len(classes_list)):
@@ -149,7 +160,7 @@ def hello():
     school_from = ",".join(schools_from)
     return render_template('school.html',
         school_from=school_from,
-        classes=handle_classes(semesters, inter, units, math))
+        classes=handle_classes(semesters, schools_from[0], inter, units, math))
     
     #if school_from in schools:
     #else:
