@@ -1,3 +1,3 @@
-Team members : Kassandra Moradel, Maria Amabella Ava, Anton Hirschl, Billy Nguyen
+#Hackathon
 
-hello world
+Team members : Kassandra Moradel, Maria Amabella Ava, Anton Hirschl, Billy Nguun

@@ -14,29 +14,103 @@ def page1():
 
 schools = ["UCLA", "USC", "CPP"]
 
-gen_eds = ["English", "Japanese", "Japanese II", "Dance", "Depression"]
+gen_eds = [
+#    ["English",4],
+#    ["Japanese",4],
+#    ["Japanese II",4],
+#    ["Dance",4],
+#    ["Depression",4],
+]
+
+#gen_eds is [short name, full name, requirements, units]
+
+for file in [
+    "./Kassandra Code 2.csv",
+    "./Area 1",
+    "./Area 2 IGETC",
+    "./Area 3",
+    "./Area 5A IGETC",
+    "./Area 6 IGETC",
+    "./Area 7 IGETC"]:
+    f = open(file, "r")
+    for line in f.read().split("\n"):
+        ls = line.split(",")
+        if len(ls) == 3:
+            try:
+                gen_eds.append([ls[0], ls[1], int(ls[2]), "0"])
+            except ValueError:
+                pass
+                print(f"VE1 at {ls}")
+        elif len(ls) == 4:
+            try:
+                gen_eds.append([ls[0], ls[1], int(ls[2]), ls[3]])
+            except ValueError:
+                pass
+                print(f"VE2 at {ls}")
+        else:
+            print(ls)
+
+maj_eds = [
+    ["Math 10",4],
+    ["CALC I",4],
+    ["CALC II",4],
+    ["CALC III",4],
+]
+
+def get_random_classes_order():
+    cl = random.sample(gen_eds, k=len(gen_eds))
+    try:
+        p1 = [name for name, a, b in cl].index("ENGL A100")
+        if p1 != 0:
+            cl[0],cl[p1] = cl[p1],cl[0]
+    except ValueError:
+        print("ENGL A100 failed")
+    return cl
 
 def handle_classes():
-    gen_eds = random.sample(gen_eds, k=len(gen_eds))
+    global gen_eds
+    global maj_eds
+    edct = len(maj_eds)
+    gened_index = 0
 
-    classes = ""
-    for y in range(1, 4+1):
-        classes += f"""
-Year {y}:
-{gen_eds[y%len(gen_eds)]}
-"""
-    return classes
+    classes_list = []
+    sems = 4
+    for i in range(sems):
+        classes_list.append(maj_eds[int(i*edct/sems):int((i+1)*edct/sems)])
+
+    GE_local = get_random_classes_order()
+    for i in range(len(classes_list)):
+        while sum(x[1] for x in classes_list[i]) < 12:
+            classes_list[i].append(GE_local.pop())
+
+            # Just for test cases
+            # Please remember to remove
+            if not GE_local:
+                GE_local.append(["Depression",1])
+
+    classes_output = []
+    for index, sem_classes in enumerate(classes_list):
+        classes_output.append(f"Semester {index} ({sum(units for c,units in sem_classes)} Units):")
+        for c,units in sem_classes:
+            classes_output.append(f"{c} for {units} Units")
+    return classes_output
 
 @app.route('/school')
 def hello():
-    schools_from = request.args.get('from').split(",")
+    schools_from = request.args.get('data').split(",")
     school_from = ",".join(schools_from)
-    return render_template('school.html', school_from=school_from, classes=handle_classes().split("\n"))
+    return render_template('school.html', school_from=school_from, classes=handle_classes())
     
     #if school_from in schools:
     #else:
     #    nearest = max(schools, key=lambda r: similar( r.upper(), school_from.upper() ))
     #    return render_template('school_error.html', school_from=school_from, DYM=nearest)
+
+import os
+@app.route('/garf')
+def garf():
+    files = os.listdir("D:/Pictures/garfield/")
+    return send_from_directory("D:/Pictures/garfield/", random.choice(files))
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=25565)
