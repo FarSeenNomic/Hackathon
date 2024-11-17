@@ -15,12 +15,22 @@ def page1():
 schools = ["UCLA", "USC", "CPP"]
 
 gen_eds = [
-    ["English",4],
-    ["Japanese",4],
-    ["Japanese II",4],
-    ["Dance",4],
-    ["Depression",4],
+#    ["English",4],
+#    ["Japanese",4],
+#    ["Japanese II",4],
+#    ["Dance",4],
+#    ["Depression",4],
 ]
+
+f = open("./Kassandra Code 2.csv", "r")
+for line in f.read().split("\n"):
+    ls = line.split(",")
+    if len(ls) == 3:
+        try:
+            gen_eds.append([ls[1], int(ls[2])])
+        except ValueError:
+            pass
+            print(f"VE at {ls}")
 
 maj_eds = [
     ["Math 10",4],
@@ -28,6 +38,16 @@ maj_eds = [
     ["CALC II",4],
     ["CALC III",4],
 ]
+
+def get_random_classes_order():
+    cl = random.sample(gen_eds, k=len(gen_eds))
+    try:
+        p1 = [name for name, a, b in cl].index("ENGL A100")
+        if p1 != 0:
+            cl[0],cl[p1] = cl[p1],cl[0]
+    except ValueError:
+        print("ENGL A100 failed")
+    return cl
 
 def handle_classes():
     global gen_eds
@@ -40,7 +60,7 @@ def handle_classes():
     for i in range(sems):
         classes_list.append(maj_eds[int(i*edct/sems):int((i+1)*edct/sems)])
 
-    GE_local = random.sample(gen_eds, k=len(gen_eds))
+    GE_local = get_random_classes_order()
     for i in range(len(classes_list)):
         while sum(x[1] for x in classes_list[i]) < 12:
             classes_list[i].append(GE_local.pop())
