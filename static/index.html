@@ -18,10 +18,10 @@
         <p>Select options below:</p>
         <form id="inputForm">
             <!-- Checkboxes -->
-            <div class="checkbox-group">
-                <label><input type="checkbox" name="options" value="UCLA"> UCLA </label>
-                <label><input type="checkbox" name="options" value="CPP"> Cal Poly Pomona </label>
-                <label><input type="checkbox" name="options" value="USC"> USC </label>
+            <div class="radio-group">
+                <label><input type="radio" name="options" value="UCLA"> UCLA </label>
+                <label><input type="radio" name="options" value="CPP"> Cal Poly Pomona </label>
+                <label><input type="radio" name="options" value="USC"> USC </label>
             </div>
             
             <!-- Dropdown Menu -->
@@ -54,12 +54,12 @@
 
     <script>
         function redirect() {
-            const checkboxes = document.querySelectorAll('input[name="options"]:checked');
+            const radioes = document.querySelectorAll('input[name="options"]:checked');
             const dropdown = document.getElementById('dropdown').value;
             const numberInput = document.getElementById('numberInput').value;
             const inter = document.getElementById('inter').checked;
 
-            const selectedValues = Array.from(checkboxes).map(checkbox => checkbox.value);
+            const selectedValues = Array.from(radioes).map(radio => radio.value);
             let queryParams = '';
 
             /*if (selectedValues.length > 0) {
