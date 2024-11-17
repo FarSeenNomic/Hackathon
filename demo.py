@@ -15,36 +15,53 @@ def page1():
 schools = ["UCLA", "USC", "CPP"]
 
 gen_eds = [
-    "English",
-    "Japanese",
-    "Japanese II",
-    "Dance",
-    "Depression",
+    ["English",4],
+    ["Japanese",4],
+    ["Japanese II",4],
+    ["Dance",4],
+    ["Depression",4],
 ]
 
 maj_eds = [
-    "Math 10",
-    "CALC I",
-    "CALC II",
-    "CALC III",
+    ["Math 10",4],
+    ["CALC I",4],
+    ["CALC II",4],
+    ["CALC III",4],
 ]
 
 def handle_classes():
-    gen_eds = random.sample(gen_eds, k=len(gen_eds))
+    global gen_eds
+    global maj_eds
+    edct = len(maj_eds)
+    gened_index = 0
 
-    classes = ""
-    for y in range(1, 4+1):
-        classes += f"""
-Year {y}:
-{gen_eds[y%len(gen_eds)]}
-"""
-    return classes
+    classes_list = []
+    sems = 4
+    for i in range(sems):
+        classes_list.append(maj_eds[int(i*edct/sems):int((i+1)*edct/sems)])
+
+    GE_local = random.sample(gen_eds, k=len(gen_eds))
+    for i in range(len(classes_list)):
+        while sum(x[1] for x in classes_list[i]) < 12:
+            classes_list[i].append(GE_local.pop())
+
+            # Just for test cases
+            # Please remember to remove
+            if not GE_local:
+                GE_local.append(["Depression",1])
+
+    classes_output = []
+    for index, sem_classes in enumerate(classes_list):
+        classes_output.append(f"Semester {index} ({sum(units for c,units in sem_classes)} Units):")
+        for c,units in sem_classes:
+            classes_output.append(f"{c} for {units} Units")
+    return classes_output
 
 @app.route('/school')
 def hello():
-    schools_from = request.args.get('from').split(",")
+    schools_from = request.args.get('data').split(",")
     school_from = ",".join(schools_from)
-    return render_template('school.html', school_from=school_from, classes=handle_classes().split("\n"))
+    return render_template('school.html', school_from=school_from, classes=handle_classes())
     
     #if school_from in schools:
     #else:
