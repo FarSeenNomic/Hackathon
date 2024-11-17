@@ -1,17 +1,11 @@
-MATH A170,Precalculus,0,4
-CS A131,Python Programming I,0,4
-PHYS A185,Calculus Based Physics: Mechanics,0,4
-MATH A285,Introduction to Linear Algebra and Differential Equations,MATH A280,4
 CS A150,C++ Programming Language 1,0,4
-CS A170,Java Programming 1,CS A150,4
+CS A200,Data Structures,CS A170,4
 MATH A180,Calculus 1,MATH A170,4
-PHYS A280,Calculus Based Physics: Electricty/Magnetism,PHYS A185,4
-CS A263,Probability and Statistics for Computer Science,0,4
+MATH A185,Calculus 2,MATH A180,4
+MATH A280,Calculus 3,MATH A280,4
+MATH A285,Introduction to Linear Algebra and Differential Equations,MATH A280,4
 MATH A230,Introduction to Discrete Mathematics,MATH A180,4
+PHYS A185,Calculus Based Physics: Mechanics,0,4
+PHYS A280,Calculus Based Physics: Electricty/Magnetism,PHYS A185,4
 PHYS A285,Calculus Based Physics: Modern,PHYS A185,4
 CS A250,C++ Programming Language 2,CS A150,4
-MATH A185,Calculus 2,MATH A180,4
-BIOL A100,Principles of Biology,0,4
-CS A200,Data Structures,CS A170,4
-MATH A280,Calculus 3,MATH A280,4
-CS A200,Data Structures,0,4
