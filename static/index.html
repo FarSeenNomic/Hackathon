@@ -34,11 +34,17 @@
                 </select>
             </div>
             
-            <!-- Number Input -->
-            <div class="number-group">
-                <label for="numberInput">Enter a number of semesters to transfer in:</label>
-                <input type="number" id="numberInput" name="numberInput" min="4" max="16" placeholder="Enter a value">
-            </div>
+        <!-- Number Input -->
+        <div class="number-group">
+            <label for="numberSemesters">Enter a number of semesters to transfer in:</label>
+            <input type="number" id="numberSemesters" name="numberSemesters" min="4" max="16" value="6" placeholder="6">
+        </div>
+        
+        <!-- Number Input -->
+        <div class="number-group">
+            <label for="numberUnits">Target number of units:</label>
+            <input type="number" id="numberUnits" name="numberUnits" min="4" max="30" value="12" placeholder="12">
+        </div>
 
             <label><input type="checkbox" name="intersession" id="inter" value="interx"> Include Intersession </label>
 
@@ -56,30 +62,21 @@
         function redirect() {
             const radioes = document.querySelectorAll('input[name="options"]:checked');
             const dropdown = document.getElementById('dropdown').value;
-            const numberInput = document.getElementById('numberInput').value;
+            const numberSemesters = document.getElementById('numberSemesters').value;
+            const numberUnits = document.getElementById('numberUnits').value;
             const inter = document.getElementById('inter').checked;
 
             const selectedValues = Array.from(radioes).map(radio => radio.value);
             let queryParams = '';
 
-            /*if (selectedValues.length > 0) {
-                queryParams += `data=${encodeURIComponent(selectedValues.join(","))}&`;
-            }
-            if (dropdown) {
-                queryParams += `major=${encodeURIComponent(dropdown)}&`;
-            }
-            if (numberInput) {
-                queryParams += `semesters=${encodeURIComponent(numberInput)}&`;
-            }*/
-
-            if (selectedValues.length > 0 && dropdown && numberInput) {
+            if (selectedValues.length > 0 && dropdown && numberSemesters && numberUnits) {
                 queryParams += `data=${encodeURIComponent(selectedValues.join(","))}&`;
                 queryParams += `major=${encodeURIComponent(dropdown)}&`;
-                queryParams += `semesters=${encodeURIComponent(numberInput)}&`;
+                queryParams += `semesters=${encodeURIComponent(numberSemesters)}&`;
+                queryParams += `units=${encodeURIComponent(numberUnits)}&`;
                 queryParams += `inter=${encodeURIComponent(inter)}&`;
-                
 
-                if (numberInput >= 4){
+                if (numberSemesters >= 4){
                     window.location.href = `/school?${queryParams.slice(0, -1)}`; // Remove trailing '&'
                 } else {
                     alert('Minimum 4 semesters');

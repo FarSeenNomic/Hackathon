@@ -96,7 +96,7 @@ def get_ges_classes_order():
 #for i in x:
 #    print(i)
 
-def handle_classes(sems, inter):
+def handle_classes(sems, inter, units):
     global gen_eds
     global maj_eds
     edct = len(maj_eds)
@@ -109,7 +109,7 @@ def handle_classes(sems, inter):
     GE_local = get_ges_classes_order()
     for i in range(len(classes_list)):
         print(1, classes_list[i])
-        while sum(x[3] for x in classes_list[i]) < 12:
+        while sum(x[3] for x in classes_list[i]) < units:
             print(2, classes_list[i])
             classes_list[i].append(GE_local.pop())
 
@@ -140,12 +140,13 @@ def hello():
     schools_from = request.args.get('data').split(",")
     major = request.args.get('major')
     semesters = int(request.args.get('semesters'))
+    units = int(request.args.get('units'))
     inter = request.args.get('inter') == "true"
 
     school_from = ",".join(schools_from)
     return render_template('school.html',
         school_from=school_from,
-        classes=handle_classes(semesters, inter))
+        classes=handle_classes(semesters, inter, units))
     
     #if school_from in schools:
     #else:
