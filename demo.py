@@ -22,15 +22,33 @@ gen_eds = [
 #    ["Depression",4],
 ]
 
-f = open("./Kassandra Code 2.csv", "r")
-for line in f.read().split("\n"):
-    ls = line.split(",")
-    if len(ls) == 3:
-        try:
-            gen_eds.append([ls[1], int(ls[2])])
-        except ValueError:
-            pass
-            print(f"VE at {ls}")
+#gen_eds is [short name, full name, requirements, units]
+
+for file in [
+    "./Kassandra Code 2.csv",
+    "./Area 1",
+    "./Area 2 IGETC",
+    "./Area 3",
+    "./Area 5A IGETC",
+    "./Area 6 IGETC",
+    "./Area 7 IGETC"]:
+    f = open(file, "r")
+    for line in f.read().split("\n"):
+        ls = line.split(",")
+        if len(ls) == 3:
+            try:
+                gen_eds.append([ls[0], ls[1], int(ls[2]), "0"])
+            except ValueError:
+                pass
+                print(f"VE1 at {ls}")
+        elif len(ls) == 4:
+            try:
+                gen_eds.append([ls[0], ls[1], int(ls[2]), ls[3]])
+            except ValueError:
+                pass
+                print(f"VE2 at {ls}")
+        else:
+            print(ls)
 
 maj_eds = [
     ["Math 10",4],
