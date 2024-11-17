@@ -1,0 +1,218 @@
+/*Area 1*/
+ENGL A100	Freshman Composition	3
+ENGL A101	Critical Reasoning: Fiction	4
+ENGL A101H	Critical Reasoning: Fiction Honors
+ENGL A102	Critical Reasoning: Nonfiction	3
+ENGL A102H	Critical Reasoning: Nonfiction Honors
+ENGL A109	Critical Reasoning and Writing for Science and Technology	3
+PHIL A150	Critical Reasoning & Writing	3
+CMST A100	Interpersonal Communication	3
+CMST A110	Public Speaking	3
+/*Area 3*/
+ARCH A290H,History of Architecture 1 Honors
+ARCH A296,History of Architecture 2,3
+ARCH A296H,History of Architecture 2 Honors
+ART A100,Survey of Western Art from Prehistory Through Gothic,3
+ART A100H,Honors Survey of Western Art from Prehistory Through Gothic
+ART A101,Survey of Western Art from Renaissance to Modern,3
+ART A101H,Honors Survey of Western Art from Renaissance to Modern
+ART A102,Survey of Modern and Contemporary Art History,3
+ART A103,Survey of Asian Art,3
+ART A107,Introduction To Art,3
+ART A108,Women in Art,3
+ART A109,Ancient Greek Art and Architecture,3
+ART A114,Art of the Ancient Americas,3
+ART A115,Art of Africa, Oceania, and Indigenous North America,3
+DANC A200,Appreciation Of Dance,3
+DANC A230,World Dance and Culture,3
+FILM A100,History and Appreciation of the Cinema,3
+FILM A100H,History and Appreciation of the Cinema Honors
+FILM A109,Science Fiction Film,3
+FILM A109H,Science Fiction Film Honors
+MUS A100,History and Appreciation of Western Classical Music,3
+MUS A105,Music from Bach Up to Rock,3
+MUS A115,Fundamentals of Music,3
+MUS A139,History of Rock Music,3
+MUS A143,History of Jazz,3
+MUS A180,Theory 1,3
+PHOT A110,Photography with a Smartphone: Theory and Practice,3
+PHOT A123,Introduction to Digital Photography,3
+PHOT A130,History and Appreciation of Photography,3
+PHOT A230,Photography Since 1945,3
+THEA A100,Introduction to Theatre,3
+THEA A101,Introduction to History and Literature of the Theatre,3
+THEA A105,Drama and Acting,3
+CHIN A185,Elementary Chinese 2,5
+CMST A155,Intercultural Communications,3
+CMST A180,Introduction to Mass Communications,3
+ENGL A140,Introduction to Literature,3
+ENGL A140H,Introduction to Literature Honors
+ENGL A141,The Bible As Literature,3
+ENGL A141H,The Bible As Literature Honors
+ENGL A143,Children's Literature,3
+ENGL A143H,Children's Literature Honors
+ENGL A147,Introduction to Science Fiction,3
+ENGL A147H,Introduction to Science Fiction Honors
+ENGL A148,Film As Literature,3
+ENGL A148H,Film As Literature Honors
+ENGL A150,American Literature Before the 20th Century,3
+ENGL A150H,American Literature Before the 20th Century Honors
+ENGL A151,American Literature in the 20th Century,3
+ENGL A151H,American Literature in the 20th Century Honors
+ENGL A152,Race, Culture, and Identity in Literature,3
+ENGL A152H,Race, Culture, and Identify in Literature Honors
+ENGL A156,California Literature,3
+ENGL A156H,California Literature Honors
+ENGL A160,World Literature Through Renaissance,3
+ENGL A160H,World Literature Through Renaissance Honors
+ENGL A161,World Literature Since Renaissance,3
+ENGL A161H,World Literature Since Renaissance Honors
+ENGL A168,Popular Fiction,3
+ENGL A170,Contemporary Literature,3
+ENGL A170H,Contemporary Literature Honors
+ENGL A173,Women Writers,3
+ENGL A173H,Women Writers Honors
+ENGL A176,World Mythology,3
+ENGL A176H,World Mythology Honors
+ENGL A179,Gender and Sexuality in Literature and Film,3
+ENGL A179H,Gender and Sexuality in Literature and Film Honors
+ENGL A181,Shakespeare,3
+ENGL A181H,Shakespeare Honors
+ENGL A187,Introduction to Literary Theory,3
+ENGL A187H,Introduction to Literary Theory Honors
+ENGL A270,Survey of British Literature Before 1800,3
+ENGL A270H,Survey of British Literature Before 1800 Honors
+ENGL A275,Survey of British Literature After 1800,3
+ENGL A275H,Survey of British Literature After 1800 Honors
+ETHS A150,Ethnic Groups in the United States: Their Histories,3
+FREN A185,Elementary French 2,5
+FREN A185H,Elementary French 2 Honors
+FREN A280,Intermediate French 1,4
+FREN A285,Intermediate French 2,4
+GNDR A187,Women in History,3
+GRMN A185,Elementary German 2,5
+GRMN A280,Intermediate German 1,4
+GRMN A285,Intermediate German 2,4
+HIST A101,Afro-American History,3
+HIST A150,Ethnic Groups of the United States: Their Histories,3
+HIST A151,History of the Middle East to 1500,3
+HIST A152,History of the Middle East Since 1500,3
+HIST A161,World History 1,3
+HIST A161H,World History 1 Honors
+HIST A162,World History 2,3
+HIST A162H,World History 2 Honors
+HIST A170,History of the United States to 1876,3
+HIST A170H,History of the United States to 1876 Honors
+HIST A175,History of the United States Since 1876,3
+HIST A175H,History of the United States Since 1876 Honors
+HIST A176,Women In U.S. History,3
+HIST A180,Western Civilization 1,3
+HIST A180H,Western Civilization 1 Honors
+HIST A185,Western Civilization 2,3
+HIST A185H,Western Civilization 2 Honors
+HIST A187,Women in History,3
+HIST A195,History of England and Greater Britain,3
+HUM A100,Introduction to the Humanities,3
+HUM A101H,Themes in Humanities Honors,3
+ITAL A185,Elementary Italian 2,5
+ITAL A280,Intermediate Italian 1,5
+ITAL A285,Intermediate Italian 2,5
+JAPN A180 or JAPN A180H,Elementary Japanese 1, 5
+JAPN A185,Elementary Japanese 2,5
+JAPN A185H,Elementary Japanese 2 Honors
+JAPN A280,Intermediate Japanese 1,5
+JAPN A285,Intermediate Japanese 2,5
+PHIL A100,Introduction to Philosophy,3
+PHIL A115,Philosophy of Religion,3
+PHIL A118,Aesthetics/Philosophy of Art,3
+PHIL A120,Ethics,3
+PHIL A125,History of Ancient Philosophy,3
+PHIL A140,History of Modern Philosophy,3
+PHIL A165,The Theory of Knowledge,3
+PHIL A185,Contemporary Philosophy,3
+PHOT A101,Photography and Society,3
+PORT A185,Elementary Portuguese 2,5
+RLST A100,Introduction to Religious Studies,3
+RLST A110,World Religion,3
+RLST A115,Philosophy of Religion,3
+RLST A135,Religion, Spirituality and Society,3
+RLST A150,Eastern Thought,3
+RLST A151,Early and Western Religions,3
+SPAN A185,Elementary Spanish 2,5
+SPAN A185H,Elementary Spanish 2 Honors
+SPAN A280,Intermediate Spanish 1,5
+SPAN A280H,Intermediate Spanish 1 Honors
+SPAN A285,Intermediate Spanish 2,5
+VIET A185,Elementary Vietnamese 2,5
+/*Area 4*/
+ANTH A100,Cultural Anthropology,3
+ANTH A100H,Cultural Anthropology Honors
+ANTH A102,Native American,3
+ANTH A187,Introduction to Primate Studies,3
+ANTH A190,Introduction to Linguistic Anthropology,3
+ANTH A220,Magic, Witchcraft, and Religion,3
+ANTH A280,Introduction to Archaeology,3
+CDE A180,Child, Growth and Development,3
+CMST A155,Intercultural Communications,3
+ECON A100,Economics: General Concepts,3
+ECON A170,Microeconomics,3
+ECON A170H,Microeconomics Honors
+ECON A175,Macroeconomics,3
+ECON A175H,Macroeconomics Honors
+ETHS A100,Contemporary Ethnic America,3
+ETHS A110,Introduction to LatinX Studies,3
+ETHS A115,Introduction to Asian American and Pacific Islander Studies,3
+ETHS A190,The Ethnic Family,3
+GNDR A100,Introduction to Gender Studies,3
+GNDR A130,Women, Politics, and Inequality,3
+GNDR A187,Women in History,3
+GEOG A100,World Regional Geography,3
+GEOG A100H,World Regional Geography Honors
+GEOG A150,California Geography,3
+GEOG A185,Cultural Geography,3
+GLST A101,Introduction to Global Studies,3
+GLST A102,Global Issues,3
+HIST A101,Afro-American History,3
+HIST A140,The California Experience,3
+HIST A144,History of Latin America,3
+HIST A145,History of Mexico,3
+HIST A151,History of the Middle East to 1500,3
+HIST A152,History of the Middle East Since 1500,3
+HIST A170,History of the United States to 1876,3
+HIST A170H,History of the United States to 1876 Honors
+HIST A175,History of the United States Since 1876,3
+HIST A175H,History of the United States Since 1876 Honors
+HIST A176,Women In U.S. History,3
+HIST A180,Western Civilization 1,3
+HIST A180H,Western Civilization 1 Honors
+HIST A185,Western Civilization 2,3
+HIST A185H,Western Civilization 2 Honors
+HIST A187,Women in History,3
+PSCI A101,Survey of Current Issues,3
+PSCI A110,International Relations,3
+PSCI A180,American Government,3
+PSCI A180H,American Government Honors
+PSCI A185,Comparative Politics,3
+PSCI A188,Introduction to Political Theory,3
+PSYC A100,Introduction to Psychology,3
+PSYC A100H,Introduction to Psychology Honors
+PSYC A110,Psychology of Adjustment,3
+PSYC A130,Life Span Developmental Psychology,3
+PSYC A165,Principles of Human Sexuality 1,3
+PSYC A185,Principles of Psychology,3
+PSYC A190,Cross-Cultural Psychology,3
+PSYC A190H,Cross-Cultural Psychology Honors
+PSYC A220,Psychology of Personality,3
+PSYC A255,Abnormal Psychology,3
+PSYC A260,Social Psychology,3
+PSYC A270,Psychology of Learning,3
+PSYC A280,Introduction to Experimental Methods,4
+PUBH A203,Health and Social Justice,3
+SJS A101,Introduction to Race and Ethnicity,3
+SJS A102,Social Justice and Activism,3
+SOC A100,Introduction to Sociology,3
+SOC A100H,Introduction to Sociology Honors
+SOC A110,Introduction to Dating, Relationships, and Marriage,3
+SOC A150,Introduction to Race and Ethnicity,3
+SOC A185,Analysis of Social Problems,3
+SOC A185H,Analysis of Social Problems Honors,3
