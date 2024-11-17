@@ -16,7 +16,9 @@
 
         {% for para in classes %}
             <div class="class-box">
-                <p>{{ para }}</p>
+        {% for item in para %}
+                <p>{{ item }}</p>
+        {% endfor %}
             </div>
         {% endfor %}
     </main>

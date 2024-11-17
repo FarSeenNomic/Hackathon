@@ -120,9 +120,11 @@ def handle_classes(sems):
 
     classes_output = []
     for index, sem_classes in enumerate(classes_list):
-        classes_output.append(f"Semester {index+1} ({sum(units for short, full, reqs, units in sem_classes)} Units):")
+        classes_per_sem = []
+        classes_per_sem.append(f"Semester {index+1} ({sum(units for short, full, reqs, units in sem_classes)} Units):")
         for short, full, reqs, units in sem_classes:
-            classes_output.append(f"{short}: {full} ({units} Units)")
+            classes_per_sem.append(f"{short}: {full} ({units} Units)")
+        classes_output.append(classes_per_sem)
     return classes_output
 
 @app.route('/school')
